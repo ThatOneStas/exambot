@@ -1,0 +1,50 @@
+[
+  {
+    "film_info": {
+      "img": "imgs/Chudotvorci.png",
+      "text": "Назва: Чудотворці\nЖанр: Комедія, Мелодрама, Фентезі\n\nКод: 1"
+    },
+    "film_ganre": "Комедія",
+    "film_code": 1
+  },
+  {
+    "film_info": {
+      "img": "imgs/Watcher.png",
+      "text": "Назва: Наглядач\nЖанр: Жахи, Містерія\nhttps://tinyurl.com/4c86kf9p\nКод: 2"
+    },
+    "film_ganre": "Жахи",
+    "film_code": 2
+  },
+  {
+    "film_info": {
+      "img": "imgs/Sherlok.png",
+      "text": "Назва: Шерлок\nЖанр: Детектив, Кримінал\nhttps://tinyurl.com/5n6cwmv3\nКод: 3"
+    },
+    "film_ganre": "Детектив",
+    "film_code": 3
+  },
+  {
+    "film_info": {
+      "img": "imgs/Zzovni.png",
+      "text": "Назва: Ззовні\nЖанр: Фантастика, Жахи\nhttps://tinyurl.com/ydcntxtz\nКод: 4"
+    },
+    "film_ganre": "Фантастика",
+    "film_code": 4
+  },
+  {
+    "film_info": {
+      "img": "imgs/SandMan.png",
+      "text": "Назва: Пісочний чоловік\nЖанр: Драма\nhttps://tinyurl.com/4vwfea72\nКод: 5"
+    },
+    "film_ganre": "Драма",
+    "film_code": 5
+  },
+  {
+    "film_info": {
+      "img": "imgs/TheBoys.png",
+      "text": "Назва: Хлопаки\nЖанр: Екшн, Бойовик\nhttps://tinyurl.com/4y8cuzkx\nКод: 6"
+    },
+    "film_ganre": "Бойовик",
+    "film_code": 6
+  }
+]

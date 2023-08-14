@@ -1,0 +1,58 @@
+[
+  {
+    "film_info": {
+      "img": "imgs/Majors.png",
+      "text": "Назва: Інструкція з виховання мажорів\nЖанр: Комедія\nhttps://tinyurl.com/28ytwb54\nКод: 1"
+    },
+    "film_ganre": "Комедія",
+    "film_code": 1
+  },
+  {
+    "film_info": {
+      "img": "imgs/WowkZWollStrit.png",
+      "text": "Назва: Вовк з Уолл-стріт\nЖанр: Комедія, Драма, Кримінал\nhttps://tinyurl.com/3fpdfrdx\nКод: 2"
+    },
+    "film_ganre": "Комедія",
+    "film_code": 2
+  },
+    {
+    "film_info": {
+      "img": "imgs/BulletTrain.png",
+      "text": "Назва: Швидкісний поїзд\nЖанр: Бойовик, Екшн, Комедія\nhttps://tinyurl.com/58dxyju8\nКод: 3"
+    },
+    "film_ganre": "Бойовик",
+    "film_code": 3
+  },
+  {
+    "film_info": {
+      "img": "imgs/TopGun.png",
+      "text": "Назва: Топ Ґан: Меверік\nЖанр: Драма, Екшн, Пригоди\nhttps://tinyurl.com/bdf6j6t5\nКод: 4"
+    },
+    "film_ganre": "Драма",
+    "film_code": 4
+  },
+  {
+    "film_info": {
+      "img": "imgs/AstralRedDoor.png",
+      "text": "Назва: Астрал: Червоні двері\nЖанр: Жахи, Детектив\nhttps://tinyurl.com/yt43t9b2\nКод: 5"
+    },
+    "film_ganre": "Жахи",
+    "film_code": 5
+  },
+  {
+    "film_info": {
+      "img": "imgs/MurrderInEastExpress.png",
+      "text": "Назва: Вбивство у «Східному експресі»\nЖанр: Детектив, Кримінал\nhttps://tinyurl.com/4zt9awms\nКод: 6"
+    },
+    "film_ganre": "Детектив",
+    "film_code": 6
+  },
+  {
+    "film_info": {
+      "img": "imgs/AvatarWaterWay.png",
+      "text": "Назва: Аватар: Шлях води\nЖанр: Фантастика, Пригоди\nhttps://tinyurl.com/ycyajhrc\nКод: 7"
+    },
+    "film_ganre": "Фантастика",
+    "film_code": 7
+  }
+]
