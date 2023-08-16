@@ -15,6 +15,14 @@ with open('Films.json', 'r', encoding='utf-8') as file_films:
 with open('Serials.json', 'r', encoding='utf-8') as file_serials:
 	Serials = json.load(file_serials)
 
+# --	-- Values -- 	--
+# --	-- Values -- 	--
+
+counters = {
+    "menu_films": 0,
+	"film_serial": 0   # 1 - films 2 - serials
+}
+
 	# ---- GanresFunc ----
 	# ---- GanresFunc ----
 def Comedy(FilmsOrSerials, cid):
@@ -57,25 +65,21 @@ def Random(FilmsOrSerials, cid):
 			photo = open(film["film_info"]['img'], 'rb')
 			bot.send_photo(cid, photo, caption=film["film_info"]['text'], reply_markup=first_reply_menu())
 
-#	Фукція за якою користувач вводить число (код до фільму чи серіалу)
-#	Після чого відкриється цикл який буде шукати відповідний фільм чи серіал за кодом
-#	Після цього виведить фільм чи серіал повідомленням у тг (також має бути try: .. expect..: щоб не дуло помилок)
-#	Потібно щоб ця функція виконулался ЯКЩО (продовження на 194 рядку...)
-def Codes(msg, cid, FilmsOrSerials):
-	print(msg)
-	# for film in FilmsOrSerials:
-	# 	if film["film_code"] == msg.text:
-	# 		photo = open(film["film_info"]['img'], 'rb')
-	# 		bot.send_photo(cid, photo, caption=film["film_info"]['text'], reply_markup=films_first_reply_menu())
-
-# --	-- Values -- 	--
-# --	-- Values -- 	--
-
-counters = {
-    "menu_films": 0,
-	"film_serial": 0   # 1 - films 2 - serials
-}
-
+def Codes(msg):
+	cid = msg.chat.id
+	print(msg.text)
+	code = msg.text
+	if counters["film_serial"] == 1:
+		for film in Films:
+			print('ye')
+			if film["film_code"] == code:
+				photo = open(film["film_info"]['img'], 'rb')
+				bot.send_photo(cid, photo, caption=film["film_info"]['text'], reply_markup=first_reply_menu())
+	elif counters["film_serial"] == 2:
+		for serial in Serials:
+			if serial["film_code"] == code:
+				photo = open(serial["film_info"]['img'], 'rb')
+				bot.send_photo(cid, photo, caption=serial["film_info"]['text'], reply_markup=first_reply_menu())
 # --	-- REPLY_MENUS SECTION --	--
 # --	-- REPLY_MENUS SECTION --	--
 
@@ -97,10 +101,6 @@ def ganres_reply_menu():
 	markup_films2.row(types.KeyboardButton('🛸 Фантастика'), types.KeyboardButton('👻 Жахи'))
 	markup_films2.row(types.KeyboardButton('↩ Назад'))
 	return markup_films2
-def codes_reply_menu():
-	markup_films3 = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	markup_films3.row(types.KeyboardButton('➡ Ввести код'), types.KeyboardButton('↩ Назад'))
-	return markup_films3
 
 # --	-- COMMANDS --	--
 # --	-- COMMANDS --	--
@@ -138,13 +138,6 @@ def echo_all(msg):
 
 	elif msg.text == '🔎 Пошук за жанрами' and counters['menu_films'] == 1:
 		bot.send_message(cid, '🕹 Оберіть жанр', reply_markup=ganres_reply_menu())
-		counters['menu_films'] += 1
-	elif msg.text == '↩ Назад' and counters['menu_films'] == 2:
-		bot.send_message(cid, 'Назад 🧭', reply_markup=first_reply_menu())
-		counters['menu_films'] -= 1
-	# ---- Codes_Films ----
-	elif msg.text == '🔎 Пошук за кодом' and counters['menu_films'] == 1:
-		bot.send_message(cid, 'Пошук за кодом 🔍', reply_markup=codes_reply_menu())
 		counters['menu_films'] += 1
 	elif msg.text == '↩ Назад' and counters['menu_films'] == 2:
 		bot.send_message(cid, 'Назад 🧭', reply_markup=first_reply_menu())
@@ -191,11 +184,8 @@ def echo_all(msg):
 			Random(Serials, cid)
 # ---	- CODES -	---
 # ---	- CODES -	---
-	#	...Користувач нажав кнопку з цим текстом (➡ Ввести код)
-	#	Після чого користувач вводить чилсло і так далі
-	#	Кнопка знаходиться на 102 рядку
-	elif msg.text == '➡ Ввести код':
-		bot.send_message(cid, "Введіть код:")
-		# bot.register_next_step_handler(cid, Codes(msg, cid, Films))
+	elif msg.text == '🔎 Пошук за кодом':
+		mess = bot.send_message(cid, "Введіть код:")
+		bot.register_next_step_handler(mess, Codes)
 
 bot.infinity_polling()
