@@ -114,6 +114,19 @@ def CodeErrText():
 	elif randomized == 3:
 		return "Такого коду не має 🥲"
 
+	print(msg.text)
+	code = msg.text
+	if counters["film_serial"] == 1:
+		for film in Films:
+			print('ye')
+			if film["film_code"] == code:
+				photo = open(film["film_info"]['img'], 'rb')
+				bot.send_photo(cid, photo, caption=film["film_info"]['text'], reply_markup=first_reply_menu())
+	elif counters["film_serial"] == 2:
+		for serial in Serials:
+			if serial["film_code"] == code:
+				photo = open(serial["film_info"]['img'], 'rb')
+				bot.send_photo(cid, photo, caption=serial["film_info"]['text'], reply_markup=first_reply_menu())
 # --	-- REPLY_MENUS SECTION --	--
 # --	-- REPLY_MENUS SECTION --	--
 
@@ -181,6 +194,7 @@ def echo_all(msg):
 		counters['menu_films'] += 1
 	elif msg.text == '↩ Назад' and counters['menu_films'] == 2:
 		bot.send_message(cid, ReturnText(), reply_markup=first_reply_menu())
+		bot.send_message(cid, 'Назад 🧭', reply_markup=first_reply_menu())
 		counters['menu_films'] -= 1
 
 # ---	- GANRES -	---
