@@ -54,5 +54,45 @@
     },
     "film_ganre": "Фантастика",
     "film_code": 7
+  },
+  {
+    "film_info": {
+      "img": "imgs/DocStrange.png",
+      "text": "Назва: Доктор Стрендж (Серія фільмів)\nЖанр: Екшн, Фантастика\n\nКод: 8"
+    },
+    "film_ganre": "Фантастика",
+    "film_code": 8
+  },
+  {
+    "film_info": {
+      "img": "imgs/LutaNichka.png",
+      "text": "Назва: Люта нічка\nЖанр: Триллер, Екшн, Пригоди\nhttps://tinyurl.com/tuk8fbsw\nКод: 9"
+    },
+    "film_ganre": "Бойовик",
+    "film_code": 9
+  },
+  {
+    "film_info": {
+      "img": "imgs/Taxi.png",
+      "text": "Назва: Таксі (Серія фільмів)\nЖанр: Комедія, Екшн\nhttps://tinyurl.com/mpvterxv\nКод: 10"
+    },
+    "film_ganre": "Комедія",
+    "film_code": 10
+  },
+  {
+    "film_info": {
+      "img": "imgs/Scream.png",
+      "text": "Назва: Крик 2022 року (Включає серію фільмів)\nЖанр: Фантастика, Пригоди\nhttps://tinyurl.com/bddt6rmb\nКод: 11"
+    },
+    "film_ganre": "Жахи",
+    "film_code": 11
+  },
+  {
+    "film_info": {
+      "img": "imgs/DeathOnNile.png",
+      "text": "Назва: Смерть на Нілі\nЖанр: Детектив, Кримінал, Драма\nhttps://tinyurl.com/yc3kns7t\nКод: 12"
+    },
+    "film_ganre": "Детектив",
+    "film_code": 12
   }
 ]

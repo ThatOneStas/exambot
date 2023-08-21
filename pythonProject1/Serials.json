@@ -46,5 +46,29 @@
     },
     "film_ganre": "Бойовик",
     "film_code": 6
+  },
+  {
+    "film_info": {
+      "img": "imgs/Island.png",
+      "text": "Назва: Острів (Дорама)\nЖанр: Фентезі, Триллер, Хоррор\nhttps://tinyurl.com/5n89pv89\nКод: 7"
+    },
+    "film_ganre": "Фантастика",
+    "film_code": 7
+  },
+  {
+    "film_info": {
+      "img": "imgs/CalmarGame.png",
+      "text": "Назва: Гра в кальмара (Дорама)\nЖанр: Триллер, Драма, Бойовик\nhttps://tinyurl.com/58y7ecac\nКод: 8"
+    },
+    "film_ganre": "Драма",
+    "film_code": 8
+  },
+  {
+    "film_info": {
+      "img": "imgs/BreakingBad.png",
+      "text": "Назва: У всі тяжкі\nЖанр: Драма, Кримінал, Триллер\nhttps://tinyurl.com/4edduk8m\nКод: 9"
+    },
+    "film_ganre": "Драма",
+    "film_code": 9
   }
 ]
